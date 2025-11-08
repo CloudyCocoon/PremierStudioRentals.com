@@ -29,8 +29,8 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-clipboard-list">Specifications &amp; Design</span></a></li>
 								<li><a href="#gallery" id="gallery-link"><span class="icon solid fa-image">Gallery</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-clipboard-list">Specifications &amp; Design</span></a></li>
 								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 							</ul>
 						</nav>
@@ -180,18 +180,20 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const header = document.getElementById("header");
-  const button = document.getElementById("collapseButton");
+  var header = document.getElementById("header");
+  var button = document.getElementById("collapseButton");
+  if (!header || !button) return;
 
   button.addEventListener("click", function() {
-  header.classList.toggle("collapsed");
-  const icon = button.querySelector('span');
-  if (!icon) return;
-  icon.classList.remove('fa-chevron-left','fa-chevron-right');
-  icon.classList.add(header.classList.contains('collapsed') ? 'fa-chevron-right' : 'fa-chevron-left');
-}); else {
-      button.innerHTML = '<i class="fas fa-chevron-left" aria-hidden="true"></i>';
-    }
+    header.classList.toggle("collapsed");
+    var icon = button.querySelector('span');
+    if (!icon) return;
+    icon.classList.remove('fa-chevron-left','fa-chevron-right');
+    icon.classList.add(
+      header.classList.contains('collapsed')
+        ? 'fa-chevron-right'
+        : 'fa-chevron-left'
+    );
   });
 });
 </script>
