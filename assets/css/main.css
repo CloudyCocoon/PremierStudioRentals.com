@@ -1,5 +1,7 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 
 /*
 	Prologue by HTML5 UP
@@ -72,6 +74,19 @@ input, select, textarea {
 	appearance: none;
 }
 
+
+:root {
+  --bg: #F8F8F6;
+  --text: #111111;
+  --accent: #D6C6A9;
+  --accent-2: #A59E8C;
+  --hover: #EADDC5;
+  --charcoal: #1A1A1A;
+  --offwhite-2: #F4F2ED;
+  --offwhite-3: #EFEDE8;
+}
+
+
 /* Basic */
 
 	html {
@@ -82,13 +97,12 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-		background: #fff;
+	body { background: var(--bg);
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: var(--text);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -112,12 +126,11 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
-		color: #666;
+		color: var(--charcoal);
 		line-height: 1.5em;
 	}
 
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		color: inherit;
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit;
 		text-decoration: none;
 	}
 
@@ -156,17 +169,14 @@ input, select, textarea {
 
 	strong, b {
 		font-weight: 300;
-		color: #666;
+		color: var(--charcoal);
 	}
 
 	em, i {
 		font-style: italic;
 	}
 
-	a {
-		text-decoration: none;
-		color: inherit;
-		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
+	a { border-bottom: dotted 1px rgba(0,0,0,0.25);
 		-moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 		-ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
@@ -174,9 +184,7 @@ input, select, textarea {
 		outline: 0;
 	}
 
-		a:hover {
-			color: #E27689;
-			border-bottom-color: rgba(255, 255, 255, 0);
+		a:hover { color: var(--accent);
 		}
 
 	sub {
@@ -1852,7 +1860,7 @@ input, select, textarea {
 		border: 0;
 		outline: 0;
 		background: #fff;
-		background: rgba(255, 255, 255, 0.75);
+		background: rgba(255,255,255,0.9);
 		width: 100%;
 		border-radius: 0.35em;
 		padding: 0.75em 1em 0.75em 1em;
@@ -1923,7 +1931,7 @@ input, select, textarea {
 			text-align: left;
 			padding: 0.5em 1em 0.5em 1em;
 			color: #fff;
-			background: #222729 url("images/overlay.png");
+			background: #111;
 		}
 
 		table thead {
@@ -1948,7 +1956,7 @@ input, select, textarea {
 		color: #fff !important;
 		text-decoration: none;
 		padding: 0.75em 2.5em 0.75em 2.5em;
-		background-color: #8ebebc;
+		background-color: var(--accent);
 		border: 0;
 		cursor: pointer;
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url("images/overlay.png");
@@ -2046,7 +2054,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #222629 url("images/overlay.png");
+		background: #111;
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
 		color: #fff;
 		height: 100%;
@@ -2082,16 +2090,14 @@ input, select, textarea {
 			text-align: center;
 		}
 
-			#header .icons a {
-				color: #41484c;
+			#header .icons a { color: inherit;
 				-moz-transition: color 0.35s ease-in-out;
 				-webkit-transition: color 0.35s ease-in-out;
 				-ms-transition: color 0.35s ease-in-out;
 				transition: color 0.35s ease-in-out;
 			}
 
-				#header .icons a:hover {
-					color: #fff;
+				#header .icons a:hover { color: var(--accent);
 				}
 
 	#logo {
@@ -2134,10 +2140,7 @@ input, select, textarea {
 			padding-left: 0;
 		}
 
-			#nav ul li a {
-				display: block;
-				padding: 0.5em 1.5em 0.5em 1.5em;
-				color: rgba(255, 255, 255, 0.5);
+			#nav ul li a { color: inherit;
 				text-decoration: none;
 				outline: 0;
 				border: 0;
@@ -2156,7 +2159,7 @@ input, select, textarea {
 					#nav ul li a span:before {
 						position: absolute;
 						left: 0;
-						color: #41484c;
+						color: rgba(255,255,255,0.65);
 						text-align: center;
 						width: 1.25em;
 						line-height: 1.75em;
@@ -2169,7 +2172,7 @@ input, select, textarea {
 				}
 
 					#nav ul li a.active span:before {
-						color: #e27689;
+						color: var(--accent);
 					}
 
 /* Footer */
@@ -2177,9 +2180,9 @@ input, select, textarea {
 	#footer {
 		margin-left: 375px;
 		text-align: center;
-		background-color: #dce3e2;
+		background-color: var(--offwhite-2);
 		padding: 3em 0 4em 0;
-		box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
+		box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.04), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
 		font-size: 0.8em;
 	}
 
@@ -2212,7 +2215,7 @@ input, select, textarea {
 			margin: 0;
 			overflow: hidden;
 			padding: 4em 0;
-			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
+			box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.04), inset 0 0.1em 0.1em 0 rgba(0,0,0,0.02);
 			text-align: center;
 			background-image: url("images/overlay.png");
 		}
@@ -2231,13 +2234,10 @@ input, select, textarea {
 					border-color: inherit;
 				}
 
-				#main > section.dark a {
-					color: #fff;
-					border-color: inherit;
+				#main > section.dark a { color: inherit;
 				}
 
-					#main > section.dark a:hover {
-						border-bottom-color: rgba(255, 255, 255, 0);
+					#main > section.dark a:hover { color: var(--accent);
 					}
 
 			#main > section.cover {
@@ -2247,27 +2247,40 @@ input, select, textarea {
 			}
 
 			#main > section.one {
-				background-color: #81918E;
+				background-color: #111;
 				background-image: url("../../images/banner.jpg");
 			}
 
 			#main > section.two {
-				background-color: #f5fafa;
+				background-color: var(--bg);
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				background-color: var(--offwhite-2);
 			}
 
 			#main > section.four {
-				background-color: #e8edec;
+				background-color: var(--offwhite-3);
 			}
 
 /* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {
 
-		/* Basic */
+		
+:root {
+  --bg: #F8F8F6;
+  --text: #111111;
+  --accent: #D6C6A9;
+  --accent-2: #A59E8C;
+  --hover: #EADDC5;
+  --charcoal: #1A1A1A;
+  --offwhite-2: #F4F2ED;
+  --offwhite-3: #EFEDE8;
+}
+
+
+/* Basic */
 
 			body, input, textarea, select {
 				font-size: 17pt;
@@ -2313,7 +2326,20 @@ input, select, textarea {
 
 	@media screen and (min-width: 961px) and (max-width: 1320px) {
 
-		/* Basic */
+		
+:root {
+  --bg: #F8F8F6;
+  --text: #111111;
+  --accent: #D6C6A9;
+  --accent-2: #A59E8C;
+  --hover: #EADDC5;
+  --charcoal: #1A1A1A;
+  --offwhite-2: #F4F2ED;
+  --offwhite-3: #EFEDE8;
+}
+
+
+/* Basic */
 
 			body, input, textarea, select {
 				font-size: 16pt;
@@ -2378,13 +2404,24 @@ input, select, textarea {
 
 /* Narrower */
 
-	#headerToggle {
-		display: none;
-	}
+	#headerToggle { display: block; }
 
 	@media screen and (max-width: 960px) {
 
-		/* Basic */
+		
+:root {
+  --bg: #F8F8F6;
+  --text: #111111;
+  --accent: #D6C6A9;
+  --accent-2: #A59E8C;
+  --hover: #EADDC5;
+  --charcoal: #1A1A1A;
+  --offwhite-2: #F4F2ED;
+  --offwhite-3: #EFEDE8;
+}
+
+
+/* Basic */
 
 			html, body {
 				overflow-x: hidden;
@@ -2440,7 +2477,7 @@ input, select, textarea {
 				width: 275px;
 				z-index: 10002;
 				width: 275px;
-				background: #222729 url("images/overlay.png");
+				background: #111;
 				box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.125);
 			}
 
@@ -2579,7 +2616,20 @@ input, select, textarea {
 
 	@media screen and (max-width: 736px) {
 
-		/* Basic */
+		
+:root {
+  --bg: #F8F8F6;
+  --text: #111111;
+  --accent: #D6C6A9;
+  --accent-2: #A59E8C;
+  --hover: #EADDC5;
+  --charcoal: #1A1A1A;
+  --offwhite-2: #F4F2ED;
+  --offwhite-3: #EFEDE8;
+}
+
+
+/* Basic */
 
 			body, input, textarea, select {
 				font-size: 14pt;
@@ -2631,3 +2681,236 @@ input, select, textarea {
 				}
 
 	}
+/* Collapse Button */
+#collapseButton {
+  cursor: pointer;
+  background: #444;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#header.collapsed {
+  width: 50px;
+}
+
+#header.collapsed #nav ul li a span {
+  display: none; /* hide text, keep icons */
+}
+
+#header.collapsed #collapseButton {
+  font-size: 1.5em;
+}
+
+/* Resize content when sidebar is collapsed */
+#header.collapsed ~ #main,
+#header.collapsed ~ #footer {
+  margin-left: 50px;
+}
+
+/* Smooth transition */
+#header,
+#main,
+#footer {
+  transition: all 0.3s ease;
+}
+
+
+/* --- Premium Specs Icons (custom) --- */
+.specs-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.spec-icon {
+  font-size: 1.15em;
+  color: var(--accent); /* subtle brand accent */
+  opacity: 0.9;
+}
+
+#portfolio .item {
+  padding: 1.25em 1em;
+}
+
+#portfolio .item p {
+  margin-bottom: 0;
+}
+
+
+/* --- Sidebar collapse behavior (ensured) --- */
+#header.collapsed { width: 60px; }
+#header.collapsed #nav ul li a span { display: none; }
+#header.collapsed #logo h1,
+#header.collapsed #logo p { display: none; }
+#header.collapsed ~ #main,
+#header.collapsed ~ #footer { margin-left: 60px; }
+
+
+/* --- Sidebar inner padding buffer --- */
+#header .top,
+#header .bottom { padding-right: 14px; }
+#nav ul li a { padding-right: 1.75em; }
+
+
+/* --- Refined collapse button --- */
+#collapseButton {
+  cursor: pointer;
+  background: var(--accent, #D6C6A9);
+  color: #111;
+  text-align: center;
+  padding: 0;
+  font-size: 1em;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+#collapseButton i { pointer-events: none; }
+
+
+/* --- Wordmark cursive --- */
+
+
+
+/* --- Specs cards + column dividers --- */
+#portfolio .item {
+  border: 1px solid rgba(214,198,169,0.5); /* champagne hairline */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  padding: 1.25em 1.25em;
+  background: rgba(255,255,255,0.85);
+}
+@media screen and (min-width: 961px) {
+  #portfolio .row > .col-4:not(:last-child) {
+    border-right: 1px solid rgba(17,17,17,0.08);
+  }
+}
+
+
+/* --- About section distinction --- */
+#about { background-color: #F4F2ED; }
+#about .container > p {
+  border-left: 3px solid #D6C6A9; /* champagne accent rule */
+  padding-left: 1em;
+}
+
+
+/* --- Hero sizing tweaks (scoped) --- */
+#top header h2.alt {
+  font-size: clamp(56px, 9vw, 110px);
+  line-height: 1.05;
+}
+#top .button {
+  font-size: 0.9em;
+  padding: 0.5em 1.5em;
+}
+
+
+/* --- Contact polish (scoped) --- */
+#contact .contact-lead {
+  font-size: 1.1em;
+  margin-bottom: 0.75em;
+  color: #333;
+}
+#contact .contact-cta {
+  display: grid;
+  gap: 0.5em;
+  justify-items: center;
+}
+#contact .contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.05em;
+  padding: 0.5em 0.75em;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.85);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.2s ease;
+}
+#contact .contact-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  border-color: var(--accent, #D6C6A9);
+}
+#contact .contact-link .icon {
+  color: var(--accent, #D6C6A9);
+  font-size: 1.05em;
+}
+
+
+
+
+
+
+
+
+
+
+/* --- Hero wordmark sizing (larger centered) --- */
+#top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#top header h2.alt {
+  margin-bottom: 1em;
+}
+
+#top .alt strong {
+  font-family: 'Tangerine', cursive;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-size: clamp(100px, 18vw, 220px);
+  line-height: 1.05;
+  text-align: center;
+}
+
+/* Adjust hero button placement */
+#top footer {
+  margin-top: 2em;
+}
+
+#top .button {
+  font-size: 0.9em;
+  padding: 0.5em 1.5em;
+}
+
+
+/* --- Gallery: two-photo responsive grid --- */
+#gallery .gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+#gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+@media screen and (min-width: 961px) {
+  #gallery .gallery.two-up {
+    grid-template-columns: 1fr 1fr;
+  }
+}
