@@ -14,7 +14,7 @@
 		<title>Premier Studio Rentals</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css?v=2" />
 	</head>
 	<body class="is-preload">
 
@@ -35,7 +35,7 @@
 							</ul>
 						</nav>
     <!-- Collapse Button -->
-    <div id="collapseButton"><i class="fas fa-chevron-left" aria-hidden="true"></i></div>
+    <div id="collapseButton"><span class="icon solid fa-chevron-left" aria-hidden="true"></span></div>
 
 				</div>
 
@@ -184,10 +184,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const button = document.getElementById("collapseButton");
 
   button.addEventListener("click", function() {
-    header.classList.toggle("collapsed");
-    if (header.classList.contains("collapsed")) {
-      button.innerHTML = '<i class="fas fa-chevron-right" aria-hidden="true"></i>';
-    } else {
+  header.classList.toggle("collapsed");
+  const icon = button.querySelector('span');
+  if (!icon) return;
+  icon.classList.remove('fa-chevron-left','fa-chevron-right');
+  icon.classList.add(header.classList.contains('collapsed') ? 'fa-chevron-right' : 'fa-chevron-left');
+}); else {
       button.innerHTML = '<i class="fas fa-chevron-left" aria-hidden="true"></i>';
     }
   });
